@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>BMIの計算</title>
+  <script language="Javascript" type="text/javascript">
+    function OnButtonClick() {
+      var height = document.getElementById("height").value;
+      var weight = document.getElementById("weight").value;
+
+      var bmi = weight / (height * height);
+
+      document.getElementById("bmi").innerHTML = "あなたのBMIは"+String(bmi)+"です";
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <p>体重:
+      <input id="weight"></p>
+    <p>身長:
+      <input id="height"></p>
+    <p><input type="button" value="BMIを求める" onclick="OnButtonClick();" /></p>
+  </form>
+  <div id="bmi"></div>
+</body>
+
+</html>

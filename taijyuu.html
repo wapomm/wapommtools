@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>適正体重の計算</title>
+  <script language="Javascript" type="text/javascript">
+    function OnButtonClick() {
+      var height = document.getElementById("height").value;
+      var Standardweight = height * height*22;
+
+      document.getElementById("Standardweight").innerHTML = "あなたの適正体重は" + String(Standardweight) + "kgです";
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <p>体重(kg):
+      <input id="weight"></p>
+    <p>身長(m):
+      <input id="height"></p>
+    <p><input type="button" value="適正体重を求める" onclick="OnButtonClick();" /></p>
+  </form>
+  <div id="Standardweight"></div>
+</body>
+
+</html>

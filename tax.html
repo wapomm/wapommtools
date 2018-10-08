@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>税込み金額の計算</title>
+  <script language="Javascript" type="text/javascript">
+    function OnButtonClick() {
+      var money = document.getElementById("money").value;
+      var taxmoney = money * 1.08;
+      document.getElementById("taxmoney").innerHTML = "あなたの税込み金額は" + String(taxmoney) + "です";
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <p>税抜き金額:
+      <input id="money"></p>
+
+    <p><input type="button" value="税込み金額を求める" onclick="OnButtonClick();" /></p>
+  </form>
+  <div id="taxmoney"></div>
+</body>
+
+</html>

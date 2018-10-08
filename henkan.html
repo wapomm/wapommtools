@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>英語をカナ文字に変換</title>s
+  <script language="Javascript" type="text/javascript">
+    function OnButtonClick() {
+      var english = document.getElementById("english").value;
+      var kanamoji;
+
+
+
+//if文をfor文の中に入れる。
+      for(var value of english){
+        console.log(value);
+        if (value=="a"){
+          kanamoji="エー";
+        } else if (value=="b") {
+          kanamoji="ビー";
+        }
+      }
+
+      document.getElementById("kanamoji").innerHTML = kanamoji;
+    }
+  </script>
+</head>
+
+<body>
+  <form>
+    <p>英語入力:
+      <input id="english"></p>
+    <p><input type="button" value="英語をカナ文字に変換" onclick="OnButtonClick();" /></p>
+  </form>
+  <div id="kanamoji"></div>
+</body>
+
+</html>

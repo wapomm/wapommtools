@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>タイムカウンター</title>
+
+</head>
+
+<body>
+  <div id="count"></div>
+</body>
+<script>
+  var i = 0;
+
+  function show() {
+    document.getElementById("count").innerHTML = String(i++) + "秒";
+    var tid = setTimeout(function() {
+      show();
+    }, 1000);
+  }
+  show();
+</script>
+
+</html>
